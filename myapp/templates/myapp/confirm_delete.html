@@ -1,0 +1,9 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+<p>Delete "{{ task.title }}"?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Yes, delete</button>
+  <a href="{% url 'myapp:index' %}">Cancel</a>
+</form>
+{% endblock %}

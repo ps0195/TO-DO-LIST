@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Todo App{% endblock %}</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 760px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: #888;
+    }
+    form.inline {
+      display: inline;
+    }
+    input.input {
+      padding: .5rem;
+      width: 70%;
+    }
+    button {
+      padding: .45rem .7rem;
+      margin-left: .5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>{% block header %}My Tasks{% endblock %}</h1>
+  {% block content %}{% endblock %}
+</body>
+</html>
